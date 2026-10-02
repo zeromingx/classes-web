@@ -8,6 +8,11 @@ body {
     font-family: Arial, sans-serif;
     background-color: #edf3f8;
     color: #111;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -21,6 +26,12 @@ header {
 
 header h1 {
     font-size: 22px;
+    color: white;
+}
+
+header h1 a {
+    color: white;
+    text-decoration: none;
 }
 
 nav ul {
@@ -44,6 +55,9 @@ nav a:hover {
     text-decoration: underline;
 }
 
+main {
+    flex: 1;
+}
 
 .hero {
     background: linear-gradient(90deg, #111a33, #2459d8);
@@ -145,12 +159,105 @@ nav a:hover {
     margin-bottom: 5px;
 }
 
+.contact {
+    width: 800px;
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 25px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+}
+
+.contact h3 {
+    font-size: 18px;
+    color: #111a33;
+    margin-bottom: 15px;
+}
+
+.contact h2 {
+    padding: 0px 0px 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.form-group label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #111a33;
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    background: #f7faff;
+    border: 1px solid #dfe7f1;
+    border-radius: 6px;
+    padding: 10px 12px;
+    font: inherit;
+    color: #111;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2459d8;
+    box-shadow: 0 0 0 3px rgba(36, 89, 216, 0.15);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact-form button {
+    align-self: flex-start;
+    background: linear-gradient(90deg, #111a33, #2459d8);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-form button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(36, 89, 216, 0.25);
+}
+
+@media (max-width: 640px) {
+    .form-row {
+        flex-direction: column;
+    }
+
+    .contact-form button {
+        align-self: stretch;
+    }
+}
+
 footer {
     background-color: #111a33;
     color: white;
     text-align: center;
     padding: 15px;
-    margin-top: 25px;
 }
 
 
